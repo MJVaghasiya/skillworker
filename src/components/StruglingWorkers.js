@@ -6,7 +6,7 @@ import img3 from '../assets/worker3.svg'
 const StruglingWorkers = () => {
     return (
         <div>
-            <div className='bg-color mt-5'>
+            <div className='bg-color '>
                 <div className='container'>
                     <h1 className='strugling-header'>Strugling to find <span className='font-yellow italic-font'>qualified and reliable </span> workers?</h1>
                     <div className='worker-p'>

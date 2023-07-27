@@ -1,6 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {LuCopyright} from 'react-icons/lu'
+import { Link } from 'react-router-dom';
+
 
 const BusinessSignup = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState('');
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const toggleShowPassword = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+
   return (
     <div>
 
@@ -8,10 +23,8 @@ const BusinessSignup = () => {
       <nav class="navbar nav-pad">
         <div class="container-fluid nav-container">
           <a class="navbar-brand" href="#">Skill Worker</a>
-          <form class="d-flex" role="search">
-            <button class="btn btn-outline-success log-in animation  mr-1-5" type="submit">
-
-              LOG IN</button>
+          <form class="d-flex pi-center " role="search">
+          <Link to='/Log-in'>  <button class="btn btn-outline-success log-in animation  mr-1-5" type="submit">LOG IN</button></Link>
             <button class="btn btn-outline-success sign-up animation " type="submit">Looking for Work?</button>
           </form>
         </div>
@@ -23,8 +36,8 @@ const BusinessSignup = () => {
         {/* FIRST COL */}
         <div className='col-lg-6 bs-form '>
 <h1 className='hero-big-font font-45' >Get matched with workers <span  className='font-red italic-font'>in minutes.</span></h1>
-<h4>Signup to start filling shifts for you business.</h4>
-<ul>
+<h4 className='mt-15'>Signup to start filling shifts for you business.</h4>
+<ul className='mt-15'>
   <li>Gain access to thousands of workers near you</li>
   <li>All workers are vetted and have an average rating of 4.6/5</li>
   <li>Find workers you can rely on with our low 3% no-show rate</li>
@@ -70,17 +83,41 @@ const BusinessSignup = () => {
           </div>
           <div className='form-group d-grid '>
           <label className='form-label'>Password</label>
-          <input className='form-input' type="password" placeholder='password'/> 
-          </div>    
+          <div className='input-button d-flex w-100'>
+          <input className='form-input w-100' 
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={handlePasswordChange}
+                  placeholder='password'/> 
+        
+            <button type="button" className='show-hide' onClick={toggleShowPassword}>
+        {showPassword ? 'Hide' : 'Show'}
+      </button> 
+      </div> 
+      </div>   
 
           <button type="button" class="btn btn-primary w-100 mt-5 mb-4">Sign up for free</button> 
-          <p>Message and data rates may apply. By clicking 'Sign up', you agree to Instawork's
-            <span>Tearms of Use</span> and<span>Privacy Policy</span>.</p>
+          <p>Message and data rates may apply. By clicking 'Sign up', you agree to Skill Worker's 
+            <span> Tearms of Use</span> and<span> Privacy Policy</span>.</p>
          
+
+
         </div>
       </div>
       </div>
       {/* FORM END */}
+      {/* FOOTER */}
+      <nav class="navbar nav-pad">
+        <div class="container-fluid nav-container">
+          <a class="navbar-brand" href="#">Skill Worker</a>
+         <div className='right d-flex'>
+        <h6>
+          <LuCopyright/>  Copyrights</h6>
+          <span  >Privacy Policy</span>
+          <span>Terms of Use</span>
+         </div>
+        </div>
+      </nav>
     </div>
   )
 }

@@ -48,7 +48,7 @@ const Login = () => {
                                         <div class="section text-center center-wrap">
                                             <h4 class="mb-4 pb-3 fw-bolder">Log in as Worker</h4>
 
-                                            <div class="form-group mt-2">
+                                            <div class="form-group mt-2 fg-pad">
                                                 <input type='phone-number' name="logpass" class="form-style" placeholder="Phone Number" id="logpass" autocomplete="none" />
                                                 <FontAwesomeIcon icon={faPhone} className="input-icon" /> </div>
                                             <a href="#" class="btn-login mt-4 a-class">Login</a>
@@ -61,13 +61,11 @@ const Login = () => {
                                         <div class="center-wrap">
                                             <div class="section text-center">
                                                 <h4 class="mb-4 pb-3 fw-bolder">Business</h4>
-                                                {/* <div class="form-group">
-                                                            <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="none" />
-                                                            <i class="input-icon fa fa-user"></i> </div>*/}
-                                                <div class="form-group mt-2">
+                                            
+                                                <div class="form-group mt-2 fg-pad">
                                                     <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="none" />
                                                     <FontAwesomeIcon icon={faAt} className="input-icon" /> </div>
-                                                <div class="form-group mt-2">
+                                                <div class="form-group mt-2 fg-pad">
                                                     <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="none" />
                                                     <FontAwesomeIcon icon={faLock} className="input-icon" /> </div>
                                                 <a href="#" class="btn-login mt-4  a-class">Signup</a>
