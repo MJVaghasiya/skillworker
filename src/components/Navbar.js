@@ -84,7 +84,7 @@ class Navbar extends React.Component {
                 </li>
 
                 <li class="nav-item dropdown">
-                  <a class="nav-link" href="#">For Workers</a>
+                  <Link class="nav-link" to="/Worker">For Workers</Link>
                 </li>
 
 

@@ -12,7 +12,7 @@ const BusinessSignup = () => {
   };
 
   const toggleShowPassword = () => {
-    setShowPassword((prevShowPassword) => !prevShowPassword);
+    setShowPassword((prevShowPassword) => !prevShowPassword); 
   };
 
 

@@ -1,22 +1,27 @@
-import React, { useState } from "react";
-// import "./styles.css";
+import React, { useState } from 'react';
+import img1 from '../assets/businessTab1.webp'
 
-function Test() {
-  const [active, setActive] = useState(false);
+const Test = () => {
+  const [imageSrc, setImageSrc] = useState('businessTab1.webp');
 
-  function closeItem() {
-    setActive(true);
-  }
-  function openItem() {
-    setActive(false);
-  }
+  const toggleImage = () => {
+    setImageSrc((prevSrc) => 
+      prevSrc === 'businessTab1.webp' ? 'image2.jpg' : 'businessTab1.webp'
+    );
+  };
+
   return (
-    <>
-      <button onClick={closeItem}>close</button>
-      <button onClick={openItem}>open</button>
-      <h1 className={active ? "close" : "open"}>Test</h1>
-    </>
+    <ul>
+      <li onClick={toggleImage}>
+        <img
+          src={imageSrc}
+          alt="Image"
+          width="200"
+          height="200"
+        />
+      </li>
+    </ul>
   );
-}
+};
 
 export default Test;

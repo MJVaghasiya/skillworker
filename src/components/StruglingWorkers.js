@@ -13,24 +13,24 @@ const StruglingWorkers = () => {
                         <p className='about-worker' >It's getting harder to find hourly workers that are a fit for your business through traditional staffing agencies. Instawork's platform makes it easy to find the qualified and reliable workers you need.</p>
                     </div>
 
-{/* BORDER-CONTENT-START */}
-<div className='row worker box'>
-    <div className='col-lg-4 text-center worker-card'>
-    <img src={img1} />
-        <p>Every worker goes through a vetting process. 93% of businesses want their workers back.</p>
-    </div>
-    <div className='col-lg-4 text-center worker-card'>
-        <img src={img2}/>
-        <p>Workers are incentivized to be reliable which results in our low 2% no-show rate.</p>
-    </div>
-    <div className='col-lg-4 text-center worker-card'>
-        <img src={img3}/>
-        <p>See profiles and experience of workers as soon as they pick up your shift.</p>
-    </div>
-</div>
-{/* BORDER-CONTENT-END */}
+                    {/* BORDER-CONTENT-START */}
+                    <div className='row worker box'>
+                        <div className='col-lg-4 text-center worker-card'>
+                            <img src={img1} />
+                            <p>Every worker goes through a vetting process. 93% of businesses want their workers back.</p>
+                        </div>
+                        <div className='col-lg-4 text-center worker-card'>
+                            <img src={img2} />
+                            <p>Workers are incentivized to be reliable which results in our low 2% no-show rate.</p>
+                        </div>
+                        <div className='col-lg-4 text-center worker-card'>
+                            <img src={img3} />
+                            <p>See profiles and experience of workers as soon as they pick up your shift.</p>
+                        </div>
+                    </div>
+                    {/* BORDER-CONTENT-END */}
 
-<button className='learn-more animation' >LEARN MORE</button>
+                    <button className='learn-more animation' >LEARN MORE</button>
                 </div>
             </div>
         </div>
