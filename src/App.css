@@ -20,13 +20,16 @@
 
   body {
     background-color: #f1ede3 !important;
+    scroll-behavior: smooth;
   }
 
   a {
     text-decoration: none !important;
     color: white !important;
   }
-
+.w-90{
+  width: 92% !important;
+}
   .font-red {
     color: #e04b4d;
   }
@@ -70,14 +73,10 @@
       transform: translateX(-500%);
     }
   }
-  @keyframes fade-out {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  @keyframes fade-Out {
+    0% {opacity: 0;}
+    100% {opacity: 1;} 
+ } 
 
   .h-70 {
     height: 70%;
@@ -123,7 +122,7 @@
 
 
   .navbar {
-    padding: 0 !important;
+    padding: 0 50px !important;
     background-color: #1C2135 !important;
   }
 
@@ -132,10 +131,6 @@
     font-weight: 700;
     font-size: 1.7rem !important;
     color: white !important;
-  }
-
-  .nav-container {
-    --bs-gutter-x: 12rem !important;
   }
 
   .navbar-nav {
@@ -386,6 +381,12 @@
     color: gray;
     margin-left: 20px;
   }
+  .text-reset{
+    font-size: 14px;
+  }
+  .text-uppercase{
+    font-size: 14px;
+  }
 
   /* B/S SIGNUP */
   .form-row {
@@ -460,6 +461,7 @@
     position: relative;
     width: 100%;
     max-width: 720px;
+    left: 4%;
     /* Adjust the maximum width as needed */
   }
 
@@ -519,7 +521,7 @@
     line-height: 3 !important;
   }
 
-  .border-top-bottom{
+  .border-top-bottom-yellow{
     border-top: 3px solid #dfcfbb;
     border-bottom: 3px solid #dfcfbb;
   }
@@ -542,6 +544,27 @@
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
  }
+ .options{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 40px;
+ }
+ .options img{
+  margin-bottom: 20px;
+ }
+ .border-right-bottom-grey{
+  border-bottom: 3px solid rgba(255,255,255,.05);
+  border-right: 3px solid rgba(255,255,255,.05);
+}
+ .border-right-grey{
+  border-right: 3px solid rgba(255,255,255,.05);
+}
+ .border-bottom-grey{
+  border-bottom: 3px solid rgba(255,255,255,.05);
+  /* border-right: 3px solid rgba(255,255,255,.05); */
+}
 
   /* HERO */
   .hero-big-font {
@@ -550,6 +573,7 @@
     font-size: 6rem;
     font-weight: 700;
     margin-top: 5rem;
+    color: #000;
   }
 
   .option {
@@ -1027,7 +1051,7 @@
 
   .tab-content h1 {
     margin: 3rem 0;
-    animation: fade-out 1000ms;
+    animation: fade-Out 1000ms;
   }
 
   .intro-option ul {
@@ -1039,7 +1063,7 @@
     margin-bottom: 10px;
     padding: 25px 50px;
     color: #C5A788;
-    animation: fade-out 1000ms;
+    animation: fade-Out 2000ms;
   }
 
   .intro-option li.active {

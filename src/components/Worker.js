@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import vid1 from '../media/worker.mp4'
+import vid1 from '../media/36a7d6ce.mp4'
 import img1 from '../assets/worker1.svg'
 import img2 from '../assets/worker2.svg'
 import img3 from '../assets/worker3.svg'
@@ -16,13 +16,13 @@ import img12 from '../assets/concessions.svg'
 import img13 from '../assets/picker-packer.svg'
 import img14 from '../assets/merchandiser.svg'
 import img15 from '../assets/busser.svg'
+import Footer from './Footer'
 
 
 const Worker = () => {
   return (
     <div>
       <Navbar />
-      <div className='container-fluid'>
 
         <div className='row w-100'>
           <div className='col-lg-6 worker-first'>
@@ -40,6 +40,7 @@ const Worker = () => {
           </div>
         </div>
 
+      {/* <div className='container-fluid'> */}
         <div className='bg-color'>
           <div className='container'>
             <h1 className='strugling-header'>Be your own boss. <br /><span className='font-yellow italic-font'>Get paid instantly. </span></h1>
@@ -68,7 +69,7 @@ const Worker = () => {
 {/* FIRST-ROW */}
         <div className='row mt-10'>
           <div className='col-lg-6 for-worker-about p-0'>
-            <div className='border-top-bottom width-pad'>
+            <div className='border-top-bottom-yellow width-pad'>
               <h2 className='for-worker-heading '>Earn more, <span className='font-red italic-font'>faster.</span></h2>
               <ul className='list'>
                 <li>We pass along all of your earnings</li>
@@ -90,7 +91,7 @@ const Worker = () => {
 
           </div>
           <div className='col-lg-6 for-worker-about'>
-            <div className='border-top-bottom width-pad2'>
+            <div className='border-top-bottom-yellow width-pad2'>
               <h2 className='for-worker-heading '>Set your own <span className='font-red italic-font'>schedule.</span></h2>
               <ul className='list'>
                 <li>Work and earn as much as you want</li>
@@ -105,7 +106,7 @@ const Worker = () => {
 {/* THIRD-ROW */}
         <div className='row mt-10'>
           <div className='col-lg-6 for-worker-about p-0'>
-            <div className='border-top-bottom width-pad'>
+            <div className='border-top-bottom-yellow width-pad2 w-90'>
               
               <h2 className='for-worker-heading'>Unlock rewrds &<span className='font-red italic-font'> opportunities.</span></h2>
               <ul className='list'>
@@ -131,7 +132,7 @@ const Worker = () => {
 
           </div>
           <div className='col-lg-6 for-worker-about '>
-            <div className='border-top-bottom width-pad2'>
+            <div className='border-top-bottom-yellow width-pad2'>
               <h2 className='for-worker-heading '>We have you<span className='font-red italic-font'> covered.</span></h2>
               <ul className='list'>
                 <li>Detailed shift instructions so you know what to expect</li>
@@ -143,28 +144,31 @@ const Worker = () => {
         </div>
 
         </div>
+           {/* </div> */}
 
-        <div className='bg-color'>
-          <h1  className='strugling-header'>Opportunities in<span className='font-yellow italic-font'> hospitality, warehousing, and more.</span></h1>
+        <div className='bg-color mt-6'>
+          <div className='container'>
+          <h1  className='strugling-header mb-2'>Opportunities in<span className='font-yellow italic-font'> hospitality, warehousing, and more.</span></h1>
           <p className='text-center'>Create an account to see a full list of positions availale in your area.</p>
-          <div className='d-grid positions-grid'>
-<div className='options'><img src={img8}/></div>
-<div className='options'><img src={img9}/></div>
-<div className='options'><img src={img10}/></div>
-<div className='options'><img src={img11}/></div>
-<div className='options'><img src={img12}/></div>
-<div className='options'><img src={img13}/></div>
-<div className='options'><img src={img14}/></div>
-<div className='options'><img src={img15}/></div>
+          </div>
+          <div className=' container d-grid positions-grid mt-5'>
+<div className='options border-right-bottom-grey'><img src={img8}/><h3>Bartender</h3></div>
+<div className='options border-right-bottom-grey'><img src={img9}/><h3>Dishwasher</h3></div>
+<div className='options border-right-bottom-grey'><img src={img10}/><h3>Event Server</h3></div>
+<div className='options border-bottom-grey'><img src={img11}/><h3>Cook</h3></div>
+<div className='options border-right-grey'><img src={img12}/><h3>Concessions</h3></div>
+<div className='options border-right-grey'><img src={img13}/><h3>Picker/Packer</h3></div>
+<div className='options border-right-grey'><img src={img14}/><h3>Merchandiser</h3></div>
+<div className='options '><img src={img15}/><h3>Busser</h3></div>
           </div>
         </div>
 
 
 
 
+<Footer/>
 
-
-      </div>
+   
     </div>
   )
 }
