@@ -35,7 +35,7 @@ const BusinessSignup = () => {
       <div className='row mt-15'>
         {/* FIRST COL */}
         <div className='col-lg-6 bs-form '>
-<h1 className='hero-big-font font-45' >Get matched with workers <span  className='font-red italic-font'>in minutes.</span></h1>
+<h1 className='big-font font-45' >Get matched with workers <span  className='font-red italic-font'>in minutes.</span></h1>
 <h4 className='mt-15'>Signup to start filling shifts for you business.</h4>
 <ul className='mt-15'>
   <li>Gain access to thousands of workers near you</li>

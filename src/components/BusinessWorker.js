@@ -87,7 +87,7 @@ const BusinessWorker = () => {
           {tabContents.map((content, index) => (
             activeTab === index && (
               <div className="container " key={index}>
-                <h1 className='hero-big-font font-4'>{content.heading} <span className='font-red italic-font'>{content.subHeading}</span></h1>
+                <h1 className='big-font font-4'>{content.heading} <span className='font-red italic-font'>{content.subHeading}</span></h1>
                 <div className='row'>
                   <div className='col-lg-6 intro-option'>
                     <ul>
