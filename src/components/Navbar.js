@@ -48,7 +48,7 @@ class Navbar extends React.Component {
                           <li className='d-flex animation'>
                             <img src={img1} />
                             <div className='intro'>
-                              <h4 className='title' >Temporary Wrokers</h4>
+                              <h4 className='title' >Temporary Workers</h4>
                               <p className='for' >Connected and matched with thousands of qualified hourly workers near you</p>
                             </div>
                           </li>
@@ -159,11 +159,10 @@ class Navbar extends React.Component {
 
               </ul>
               <form class="d-flex pi-center" role="search">
-                <Link to='/Log-in'>    <button class="btn btn-outline-success log-in animation " type="submit">
+                <Link to='/Log-in'> 
+                  <button class="btn btn-outline-success log-in animation " type="submit"> LOG IN</button></Link>
 
-                  LOG IN</button></Link>
-
-                  <Link to='/Sign-up  '>  <button class="btn btn-outline-success sign-up animation" type="submit">SIGN UP</button></Link>
+                <Link to='/Sign-up  '>  <button class="btn btn-outline-success sign-up animation" type="submit">SIGN UP</button></Link>
               </form>
             </div>
           </div>

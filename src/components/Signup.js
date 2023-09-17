@@ -30,7 +30,7 @@ const Signup = () => {
                         </Link>
                         
                         {/* WORKER */}
-                       <Link to='/WorkerSignup'>
+                       <Link to='/Log-in'>
                         <div className='business-signup d-flex '>
                             <img className='mr-1-5' src={img2} />
                             <div className='card-side '>

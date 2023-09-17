@@ -151,7 +151,7 @@ const Worker = () => {
           <h1  className='strugling-header mb-2'>Opportunities in<span className='font-yellow italic-font'> hospitality, warehousing, and more.</span></h1>
           <p className='text-center'>Create an account to see a full list of positions availale in your area.</p>
           </div>
-          <div className=' container d-grid positions-grid mt-5'>
+          <div className=' container d-grid    mt-5'>
 <div className='options border-right-bottom-grey'><img src={img8}/><h3>Bartender</h3></div>
 <div className='options border-right-bottom-grey'><img src={img9}/><h3>Dishwasher</h3></div>
 <div className='options border-right-bottom-grey'><img src={img10}/><h3>Event Server</h3></div>

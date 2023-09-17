@@ -1,4 +1,3 @@
-import img from '../assets/hero-0img.jpg'
 import React, { useState, useEffect } from 'react';
 import PopupForm from './PopupForm';
 
@@ -25,13 +24,13 @@ const Hero = () => {
       <PopupForm isOpen={isPopupOpen} onClose={togglePopup} />
 
      
-      <hr style={{width:"100%", border:"1.5px solid #585858"}}/>
+      {/* <hr style={{width:"100%", border:"1.5px solid #585858"}}/>
       <h5>Looking for care at home?</h5>
       <div className='postcode'>
         <input type="search" placeholder='Enter your postcode'></input>
       <button>GO</button>
         
-      </div>
+      </div> */}
 
      </div>
      

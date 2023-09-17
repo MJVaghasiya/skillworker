@@ -1,10 +1,12 @@
+// PopupForm.js
 import React, { useState } from 'react';
+import Select from 'react-select'
+
+
 import { RxCross1 } from 'react-icons/rx';
-import axios from 'axios'
 
 const PopupForm = ({ isOpen, onClose }) => {
   const [inputValue, setInputValue] = useState('');
-  const [location, setLocation] = useState('');
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -17,31 +19,9 @@ const PopupForm = ({ isOpen, onClose }) => {
     onClose();
   };
 
-  const handleRetrieveLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(async (position) => {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-
-        try {
-          const response = await axios.get(
-            `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=YOUR_MAPBOX_ACCESS_TOKEN`
-          );
-          const areaName = response.data.features[0].place_name;
-          setLocation(areaName);
-        } catch (error) {
-          console.error('Error retrieving location:', error);
-        }
-      }, (error) => {
-        console.error('Error retrieving location:', error);
-      });
-    } else {
-      console.error('Geolocation is not supported in this browser.');
-    }
-  };
 
   if (!isOpen) {
-    return null;
+    return null; // Return null if the popup is closed
   }
 
   return (
@@ -50,19 +30,51 @@ const PopupForm = ({ isOpen, onClose }) => {
         <button className="close-button" onClick={onClose}>
           <RxCross1 />
         </button>
-        <h2>Popup Form</h2>
+        <h2 style={{marginBottom:"20px"}}>Signup Form</h2>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="locationInput">Enter Location:</label>
+          <select>
+            <option value="">Choose your Area</option>
+            <option value="option1">London</option>
+            <option value="option2">Manchester</option>
+            <option value="option3">Birmingham</option>
+            <option value="option4">Portsmouth</option>
+            <option value="option5">Coventry</option>
+          </select>
+          <select >
+            <option value="">Choose your Job</option>
+            <option value="option1">Clinical</option>
+            <option value="option2">Cook</option>
+            <option value="option3">Picker/Packer</option>
+            <option value="option4">Event Server</option>
+            <option value="option5">Busser</option>
+          </select>
+          <div className='row w-90'>
+            <div className='col-lg-5'>
+         
+          <input type="radio" name="Part-Time" value="Part-Time"/>
+          <label > Part-time</label>
+         </div>
+
+         <div className='col-lg-5'>
+        
+          <input type="radio" name="Part-Time" value="Full-Time"/>
+          <label > Full-time</label>
+          </div>
+          </div>
+         
           <input
-            type="text"
-            id="locationInput"
-            value={location}
-            onChange={handleInputChange}
-            placeholder="Enter location"
+          className='w-100'
+          type='text'
+          placeholder='Your Qualification'
+          value={inputValue}
+          onChange={handleInputChange}
           />
-          <button type="submit" className="find-worker">Submit</button>
+         
+        
+          <button type="submit" className='find-worker'>Submit</button>
         </form>
-        <button onClick={handleRetrieveLocation}>Retrieve Location</button>
+
+
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import About from './About'
 import StruglingWorkers from './StruglingWorkers'
 import BusinessWorker from './BusinessWorker'
 import FindWork from './PopupForm'
+import Logo from './Logo'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <About />
+      <Logo/>
       <StruglingWorkers />
       <BusinessWorker/>
       <FindWork/>
